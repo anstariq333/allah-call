@@ -1,7 +1,7 @@
 import ImageCssBg from "./ImageCssBg";
 const reviews = [
   {
-    name: "Zubair Alam",
+    name: " Engineer Hafiz Haris",
     role: "Mentor",
     experience: [
       "10+ Years of average mentor experience.",
@@ -9,7 +9,7 @@ const reviews = [
     ],
   },
   {
-    name: "Michael Lee",
+    name: "Engineer Hafiz Haris",
     role: "Instructor",
     experience: [
       "7+ Years of experience in web development.",
@@ -17,8 +17,8 @@ const reviews = [
     ],
   },
   {
-    name: "Mark Johnson",
-    role: "Instructor",
+    name: "Engineer Hafiz Haris",
+    role: "Guider",
     experience: [
       "5+ Years of data science experience.",
       "Specializes in machine learning and AI projects.",
@@ -52,7 +52,7 @@ export const globeInstructorCardMarkup = `<div style={{backgroundColor: "red"}} 
           <ImageCssBg src="/review_avatar.svg" alt="review avatar image" />
         </div>
         <div className="person-info">
-          <h3 className="font-medium text-[#170D23]">Zubair Alam</h3>
+          <h3 className="font-medium text-[#170D23]">Hafiz Haris</h3>
           <p className="text-[#4A525D]">Mentor</p>
         </div>
       </div>
@@ -71,7 +71,7 @@ function GlobeInstructorCard() {
           <ImageCssBg src="/review_avatar.svg" alt="review avatar image" />
         </div>
         <div className="person-info">
-          <h3 className="font-medium text-[#170D23]">Zubair Alam</h3>
+          <h3 className="font-medium text-[#170D23]">Hafiz Haris</h3>
           <p className="text-[#4A525D]">Mentor</p>
         </div>
       </div>

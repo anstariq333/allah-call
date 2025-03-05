@@ -7,7 +7,7 @@ function LearningSection() {
     <>
       <LayoutXPadding>
         <div>
-          <div className="content text-center">
+          <div className="content text-center mt-12">
             <div className="mx-auto mb-1.5 w-max rounded-[3.25rem] border border-[#4000FF] bg-white px-4 py-1 text-xs font-medium text-[#4000FF]">
               Build up the community
             </div>
@@ -22,7 +22,7 @@ function LearningSection() {
         </div>
       </LayoutXPadding>
       {/* Globe */}
-      <div className="!mb-10">
+      <div className="!mb-10 mt-12">
         <CustomGlobe />
       </div>
     </>

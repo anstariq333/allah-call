@@ -61,7 +61,7 @@ function InstructorGlobe() {
   }, []);
 
   return (
-    <div className="wrapper-globe relative !mt-0">
+    <div className="wrapper-globe relative max-w-full overflow-hidden !mt-0">
       {/* <div className="bg-[rgba(255, 255, 255, 0.7)] pointer-events-none absolute inset-0 z-40 !size-full mix-blend-screen"></div> */}
       {/* <div className="pointer-events-none absolute inset-0 z-40 h-[600px] w-full bg-white opacity-55 mix-blend-overlay"></div>   */}
       <Globe

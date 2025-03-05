@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
 
 .approve {
   @apply !text-approve hover:!bg-approve-hover-bg;
@@ -48,9 +48,9 @@ progress::-moz-progress-value {
   background-color: #0038FF; /* blue.DEFAULT */
   border-radius: 7px;
 }
-body {
+/* body {
   @apply font-poppins;
-}
+} */
 
 .globe-instructor-details {
   border-radius: 1.25rem;
@@ -81,7 +81,7 @@ body {
   width: 3rem;
   border-radius: 9999px;
   background-color: #f5f5f5;
-  background-image: url("/review_avatar.svg");
+  background-image: url("/review_avatar.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,7 +107,7 @@ body {
   height: 25px;
   width: 25px;
   background-color: #f5f5f5;
-  background-image: url("/review_avatar.svg");
+  background-image: url("/review_avatar.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
