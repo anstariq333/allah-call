@@ -50,8 +50,7 @@ const LandingFAQs = () => {
             </p>
           </div>
 
-          <div className="mt-[1rem] w-[7
-          0%] max-md:w-[90%]">
+          <div className="mt-[1rem] w-[70%] max-md:w-[90%]">
             <ul className="w-[100%]">
               <li
                 onClick={toggleDropDown}
@@ -60,7 +59,7 @@ const LandingFAQs = () => {
                 <div className="flex justify-between">
                   <span
                     onClick={() => setDropDownState(!dropDownState)}
-                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-lg"
+                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base"
                   >
                     What is AllahCall?
                   </span>
@@ -90,7 +89,7 @@ const LandingFAQs = () => {
                 className="border-darkPurple flex flex-col border-b-[1px] py-4 relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-lg">
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base">
                     How do I enroll in a course?
                   </span>
                   <Image
@@ -118,7 +117,7 @@ const LandingFAQs = () => {
                 className="border-darkPurple flex flex-col border-b-[1px] py-4 relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-lg">
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base">
                     Do I get lifetime access to courses?
                   </span>
                   <Image
@@ -148,7 +147,7 @@ const LandingFAQs = () => {
                 <div className="flex justify-between">
                   <span
                     onClick={() => setDropDownState(!fourthDropDownState)}
-                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-lg"
+                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base"
                   >
                     Can I get a refund if I’m not satisfied?
                   </span>
@@ -177,7 +176,7 @@ const LandingFAQs = () => {
                 className="border-darkPurple md:flex flex-col border-b-[1px] py-4 hidden relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-lg">
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
                     Can I access courses on mobile devices?
                   </span>
                   <Image
@@ -205,7 +204,7 @@ const LandingFAQs = () => {
                 className="border-darkPurple md:flex flex-col border-b-[1px] py-4 hidden relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-lg">
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
                     Will I receive a certificate after completing a course?
                   </span>
                   <Image

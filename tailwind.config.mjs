@@ -9,6 +9,7 @@ export default {
   theme: {
   	extend: {
 			colors: {
+        primary: "#6137DB",
         "dashboard-border": {
           DEFAULT: "#E0E3F0",
         },
