@@ -20,7 +20,7 @@ export default function Navbar() {
     { name: "Islam", path: "/islam", subLinks: [
       { name: "Quran & Sunnah", path: "/quran-sunnah" },
       { name: "Dawah", path: "/dawah" },
-      { name: "Islam & Marriage", path: "/islam-marriage" },
+      { name: "Islam & Marriage", path: "/marriage" },
     ] },
     { name: "Religions", path: "/religions", subLinks: [
       { name: "Christianity", path: "/christianity" },
