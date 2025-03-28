@@ -3,7 +3,7 @@ import Image from "next/image";
 const workItems = [
   {
     title: "Learning Platform",
-    image: "/learning-platform.jpg", // Replace with actual paths
+    image: "/learning.png",
   },
   {
     title: "Lighthouse Mentoring",
@@ -42,7 +42,7 @@ export default function OurWork() {
               alt={item.title}
               width={400}
               height={250}
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-cover hover:scale-110 cursor-pointer"
             />
             <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-lg font-semibold py-3">
               {item.title}

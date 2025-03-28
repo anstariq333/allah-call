@@ -1,51 +1,184 @@
-export default function Footer() {
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
+import LayoutXPadding from "./LayoutXPadding";
+
+const footerLinks = [
+  {
+    label: "Company",
+    options: [
+      { label: "About", href: "/about" },
+      { label: "Courses", href: "/courses" },
+      { label: "Career Counselling", href: "/career-counseling" },
+      { label: "Live Session", href: "/bootcamp" },
+      { label: "FAQ", href: "/#faq" },
+      { label: "Terms of Services", href: "/terms-&-conditions" },
+    ],
+  },
+  {
+    label: "Contact",
+    options: [
+      { label: "+92 304 0496627", href: "tel:+923040496627" },
+      { label: "allahcall786@gmail.com", href: "mailto:allahcall786@gmail.com" },
+    ],
+  },
+  {
+    label: "Our Platforms",
+    options: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/allah_call1",
+        target: "_blank",
+      },
+      {
+        label: "Twitter",
+        href: "https://www.twitter.com/Allah_call1",
+        target: "_blank",
+      },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/Allah.Call1",
+        target: "_blank",
+      },
+      {
+        label: "YouTube",
+        href: "https://youtube.com/@allahcall2421",
+        target: "_blank",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/allah-call/",
+        target: "_blank",
+      },
+     
+    ],
+  },
+ 
+];
+
+const HomepageFooter = ({ className }) => {
+  useEffect(() => {
+    const section = window.location.hash.replace("#", "");
+    if (section) {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  const onSocialClick = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
-    <footer className="bg-gray-900 text-gray-300 py-8 px-6 ">
-      <div className="max-w-[100%]  grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left py-20">
-        {/* Left Section */}
-        <div className="space-y-8" >     
-          <h2 className="text-2xl font-semibold text-white">Sapience Institute</h2>
-          <p className="text-base mt-2">for Islamic Thought and Education</p>
-          <p className="text-lg mt-2">Powered by Allah Call Education PK. EIN: 86-2956026. 501(c)3. All Rights Reserved.</p>
-          <div className="mt-4">
-            <a href="#" className="text-blue-400 text-lg hover:underline">Privacy Policy</a>
-            <span className="mx-2">|</span>
-            <a href="#" className="text-blue-400 text-lg hover:underline">Terms of Service</a>
-            <span className="mx-2">|</span>
-            <a href="#" className="text-blue-400 text-lg hover:underline">Support</a>
+    <LayoutXPadding>
+      <footer className={`${className} bg-white pt-10 pb-6`}>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {/* Left Section */}
+          <div className="space-y-4 text-center md:text-left lg:mt-12 ">
+            <h2 className="text-3xl font-bold text-primary">AllahCall Institute</h2>
+            <p className="text-gray-500 text-sm font-semibold">
+              For Islamic Thought and Education
+            </p>
+            <p className="text-gray-500 text-sm font-semibold">
+             Powered by Allah Call Education PK. EIN: 86-2956026. 501(c).
+            </p>
+          </div>
+
+          {/* Center Links */}
+          <div className="flex flex-wrap justify-between md:justify-evenly gap-6 col-span-3">
+            {footerLinks.map((section, i) => (
+              <FooterColumn key={i} options={section} />
+            ))}
           </div>
         </div>
 
-        {/* Middle Section */}
-        <div className="space-y-8" >
-          <h2 className="text-2xl font-semibold text-white">Contact Us</h2>
-          <p className="text-base mt-2 ">Have any questions?</p>
-          <p className=""></p>
-          <a href="mailto:info@sapienceinstitute.org" className="text-blue-400 text-lg hover:underline ">
-            info@allahcall.org
-          </a>
+        {/* Bottom Section */}
+        <div className="mt-6 border-t pt-4 flex flex-col items-center md:flex-row md:justify-between text-sm text-gray-500">
+          <span>&copy; {new Date().getFullYear()} AllahCall Institute. All rights reserved.</span>
+          <div className="flex justify-center md:justify-end items-center space-x-4 mt-4 md:mt-0">
+            <Image
+              src="/instagram-icon-footer.png"
+              alt="Instagram"
+              className="cursor-pointer"
+              width={30}
+              height={30}
+              onClick={() =>
+                onSocialClick("https://www.instagram.com/allah_call1")
+              }
+            />
+            <Image
+              src="/twitter-icon-footer.png"
+              alt="Twitter"
+              className="cursor-pointer"
+              width={30}
+              height={30}
+              onClick={() =>
+                onSocialClick("https://www.twitter.com/Allah_call1")
+              }
+            />
+            <Image
+              src="/linkedin-icon-footer.png"
+              alt="LinkedIn"
+              className="cursor-pointer"
+              width={30}
+              height={30}
+              onClick={() =>
+                onSocialClick("https://www.linkedin.com/company/allah-call/")
+              }
+            />
+            <Image
+              src="/facebook-icon-footer.png"
+              alt="Facebook"
+              className="cursor-pointer"
+              width={30}
+              height={30}
+              onClick={() =>
+                onSocialClick("https://www.facebook.com/Allah.Call1")
+              }
+            />
+          
+          </div>
         </div>
-
-        {/* Right Section */}
-        <div>
-          <h2 className="text-2xl  mb-5 font-semibold text-white">Search this site</h2>
-          <input
-            type="text"
-            placeholder="Enter your search"
-            className="mt-2 w-full p-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-      </div>
-
-      <div className="mt-8 border-t border-gray-700 pt-4 flex flex-col md:flex-row items-center justify-between">
-        <p className="text-sm">&copy; 2025 Allah Call (Allah Call Education PK). All Rights Reserved.</p>
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-youtube"></i></a>
-          <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </LayoutXPadding>
   );
-}
+};
+
+export default HomepageFooter;
+
+const FooterColumn = ({
+  className,
+  options = { label: "Company", options: [{ label: "about", href: "/" }] },
+}) => {
+  return (
+    <div className={`${className} row`}>
+      <h3 className="mb-2 text-xl font-bold text-[#170D23]">
+        {options.label}
+      </h3>
+      <ul className="space-y-4 text-sm font-light text-[#4A525D]">
+        {options?.options.map((option, index) => (
+          <li key={index}>
+            {option?.href ? (
+              <Link
+                href={option?.href}
+                target={option?.target ? "_blank" : "_self"}
+                rel={option?.target ? "noopener noreferrer" : undefined}
+                className="flex items-center justify-start gap-2 text-nowrap capitalize hover:text-primary"
+              >
+                {option?.label}
+                <Image
+                  alt="external link icon"
+                  height={16}
+                  width={16}
+                  src="/arrow-down-left.png"
+                  className="inline-block"
+                />
+              </Link>
+            ) : (
+              option.label
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
