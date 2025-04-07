@@ -58,15 +58,21 @@ const footerLinks = [
 
 const HomepageFooter = ({ className }) => {
   useEffect(() => {
-    const section = window.location.hash.replace("#", "");
-    if (section) {
-      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    if (typeof window !== "undefined") {
+      const section = window.location.hash.replace("#", "");
+      if (section) {
+        document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }, []);
+  
 
   const onSocialClick = (url) => {
-    window.open(url, "_blank");
+    if (typeof window !== "undefined") {
+      window.open(url, "_blank");
+    }
   };
+  
 
   return (
     <LayoutXPadding>
