@@ -9,16 +9,17 @@ import {
 } from "../../data/globeMarkersData";
 import { markups } from "./GlobeInstructorCard";
 
-const Globe = dynamic(() => import("react-globe.gl"), {
+// Dynamic import with SSR disabled
+const Globe = dynamic(() => import("react-globe.gl"), { 
   ssr: false,
-  loading: () => <div className="w-full h-[350px]" />,
+  loading: () => <div className="w-full h-[350px]" />
 });
 
 function InstructorGlobe() {
   const [globeReady, setGlobeReady] = useState(false);
   const [dimensions, setDimensions] = useState({
-    width: 1200, // Default large size
-    height: 650, // Default large size
+    width: 1200, // Default value that matches your original behavior
+    height: 650  // Default value that matches your original behavior
   });
   const globeRef = useRef(null);
   const [hex, setHex] = useState({ features: [] });
@@ -26,23 +27,21 @@ function InstructorGlobe() {
   // Initialize dimensions and set up resize listener
   useEffect(() => {
     // Only run on client side
-    if (typeof window !== "undefined") {
-      const updateDimensions = () => {
-        setDimensions({
-          width: window.innerWidth,
-          height: window.innerWidth < 600 ? 350 : 650,
-        });
-      };
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerWidth < 600 ? 350 : 650, // Preserving your exact responsive logic
+      });
+    };
 
-      // Set initial dimensions
-      updateDimensions();
+    // Set initial dimensions immediately
+    handleResize();
 
-      // Add event listener
-      window.addEventListener("resize", updateDimensions);
+    // Add event listener
+    window.addEventListener("resize", handleResize);
 
-      // Cleanup
-      return () => window.removeEventListener("resize", updateDimensions);
-    }
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Countries data
