@@ -73,7 +73,7 @@ const HomepageFooter = ({ className }) => {
       <footer className={`${className} bg-white pt-10 pb-6`}>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Left Section */}
-          <div className="space-y-4 text-center md:text-left lg:mt-12 ">
+          <div className="space-y-4 text-center md:text-left  ">
             <h2 className="text-3xl font-bold text-primary">AllahCall Institute</h2>
             <p className="text-gray-500 text-sm font-semibold">
               For Islamic Thought and Education
