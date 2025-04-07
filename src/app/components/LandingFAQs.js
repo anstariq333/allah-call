@@ -40,7 +40,7 @@ const LandingFAQs = () => {
         id="faq"
         className="mx-auto flex h-auto w-[90%] flex-col items-center justify-center rounded-2xl "
       >
-        <div className="mb-[2rem] mt-20 flex h-[100%] w-[100%] flex-col items-center justify-center">
+        <div className="mb-[2rem] mt-2 flex h-[100%] w-[100%] flex-col items-center justify-center">
           <div className="flex h-[20%] w-[90%] flex-col items-center justify-center">
             <h2 className="font-sans text-5xl sm:text-5xl font-bold">
                    FAQs

@@ -9,29 +9,51 @@ import {
 } from "../../data/globeMarkersData";
 import { markups } from "./GlobeInstructorCard";
 
-
-// const Globe = dynamic(import("react-globe.gl"), { ssr: false });
-let Globe = () => null;
-if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
+const Globe = dynamic(() => import("react-globe.gl"), {
+  ssr: false,
+  loading: () => <div className="w-full h-[350px]" />,
+});
 
 function InstructorGlobe() {
   const [globeReady, setGlobeReady] = useState(false);
   const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerWidth < 600 ? 350 : 650,
+    width: 1200, // Default large size
+    height: 650, // Default large size
   });
   const globeRef = useRef(null);
   const [hex, setHex] = useState({ features: [] });
 
-  // Countries
+  // Initialize dimensions and set up resize listener
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window !== "undefined") {
+      const updateDimensions = () => {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerWidth < 600 ? 350 : 650,
+        });
+      };
+
+      // Set initial dimensions
+      updateDimensions();
+
+      // Add event listener
+      window.addEventListener("resize", updateDimensions);
+
+      // Cleanup
+      return () => window.removeEventListener("resize", updateDimensions);
+    }
+  }, []);
+
+  // Countries data
   useEffect(() => {
     setHex(HEX_DATA);
   }, []);
 
+  // Globe initialization
   useEffect(() => {
-    if (!globeRef.current) {
-      return;
-    }
+    if (!globeRef.current) return;
+
     globeRef.current.pointOfView(
       {
         lat: globeMarkersData[5].lat + 25,
@@ -41,34 +63,13 @@ function InstructorGlobe() {
       1,
     );
     globeRef.current.controls().enableZoom = false;
-    // Auto-rotate
-    // globeRef.current.controls().autoRotate = true;
-    // globeRef.current.controls().autoRotateSpeed = 1;
   }, [globeReady]);
-
-  // handle globe size
-  useEffect(() => {
-    function handleResize() {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerWidth < 600 ? 350 : 650,
-      });
-    }
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="wrapper-globe relative max-w-full overflow-hidden !mt-0">
-      {/* <div className="bg-[rgba(255, 255, 255, 0.7)] pointer-events-none absolute inset-0 z-40 !size-full mix-blend-screen"></div> */}
-      {/* <div className="pointer-events-none absolute inset-0 z-40 h-[600px] w-full bg-white opacity-55 mix-blend-overlay"></div>   */}
       <Globe
-        // Globe config
         ref={globeRef}
         onGlobeReady={() => setGlobeReady(true)}
-        // height={650}
         height={dimensions.height}
         width={dimensions.width}
         animateIn={true}
@@ -82,12 +83,10 @@ function InstructorGlobe() {
         }
         atmosphereColor="#91B4F5"
         atmosphereAltitude="0.20"
-        // polygons
         hexPolygonsData={hex.features}
         hexPolygonResolution={3}
         hexPolygonMargin={0.5}
         hexPolygonColor={useCallback(() => "white", [])}
-        // Variant
         htmlElementsData={globeMarkersData}
         htmlElement={(d) => {
           const el = document.createElement("div");
@@ -102,18 +101,12 @@ function InstructorGlobe() {
           }
           return el;
         }}
-        htmlAltitude={(d) => {
-          if (d?.tutor) return 0.2;
-          return 0;
-        }}
-        // Arcs Data
-        // arcsData={globeArcsData}
+        htmlAltitude={(d) => (d?.tutor ? 0.2 : 0)}
         arcsData={randomArcsData}
         arcColor={"color"}
         arcAltitude={0.3}
         arcDashLength={() => Math.random()}
         arcDashGap={() => Math.random()}
-        // arcDashAnimateTime={() => Math.random() * 4000 + 500}
         arcDashAnimateTime={3800}
       />
     </div>
