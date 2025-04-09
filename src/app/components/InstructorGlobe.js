@@ -112,4 +112,5 @@ function InstructorGlobe() {
   );
 }
 
-export default InstructorGlobe;
+export default InstructorGlobe
+;
