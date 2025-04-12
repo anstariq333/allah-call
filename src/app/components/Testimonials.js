@@ -8,47 +8,47 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      heading: "Hire an entire team of Developers from us.",
+      heading: "Finding Peace in Islam",
       message:
-        " AllahCall delivered outstanding results, simplifying our hiring process and letting us focus on top candidates effortlessly.",
-      author: "Saad Salman",
-      designation: "Sales Representative, Linkify",
+        "AllahCall's authentic teachings cleared my misconceptions and guided me to embrace Islam with a pure heart.",
+      author: "Sarah Johnson",
+      designation: "New Muslim, United States",
       image: "/avt1.png",
     },
     {
       id: 2,
-      heading: "Hire an entire team of Developers from us.",
+      heading: "Clarity Through Knowledge",
       message:
-        "With the help of AllahCall we were able to transform the way we approached hiring. The entire process became faster and more efficient.",
-      author: "Muhammad Nameer Uddin",
-      designation: "Founder, Universal Technologies",
+        "The scholars at AllahCall answered all my questions with wisdom, helping me overcome my doubts about Islam.",
+      author: "Michael Chen",
+      designation: "Revert to Islam, Canada",
       image: "/avt15.png",
     },
     {
       id: 3,
-      heading: "Hire an entire team of Developers from us.",
+      heading: "From Confusion to Certainty",
       message:
-        "We saw incredible results with AllahCall’s seamless hiring process. It allowed us to focus on evaluating top candidates without the usual hassle.",
-      author: "Arshad Iqbal",
-      designation: "Country Manager, Tixsee Labs LLC",
+        "AllahCall helped me understand the true beauty of Islam and cleared all my misconceptions.",
+      author: "Emma Wilson",
+      designation: "New Muslim, United Kingdom",
       image: "/avt14.png",
     },
     {
       id: 4,
-      heading: "Hire an entire team of Developers from us.",
+      heading: "A Journey of Discovery",
       message:
-        "Finding the right people for our team was never this simple. AllahCall made sure we had the best talent in no time.",
-      author: "Muhammad Ahsan Khan",
-      designation: "Founder, SkillBuilder",
+        "AllahCall's authentic Islamic knowledge helped me see Islam in its true light and embrace it.",
+      author: "David Martinez",
+      designation: "Revert to Islam, Spain",
       image: "/avt13.png",
     },
     {
       id: 5,
-      heading: "Hire an entire team of Developers from us.",
+      heading: "Understanding Islam's Beauty",
       message:
-        "AllahCall transformed our hiring process, dramatically speeding up candidate sourcing with advanced AI.",
-      author: "Muhammad Aqib",
-      designation: "Founder, Well-Tech",
+        "Through AllahCall's teachings, I found the truth about Islam and embraced it with an open heart.",
+      author: "Sophie Anderson",
+      designation: "New Muslim, Australia",
       image: "/avt14.png",
     },
   ];
@@ -56,11 +56,11 @@ const Testimonials = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-5xl font-bold text-gray-900">
-          Reviews
+        <h2 className="text-center text-5xl font-bold text-[#6B2FB3]">
+          Stories of Guidance
         </h2>
         <p className="text-center text-md text-gray-500 mt-2">
-          Don’t take our words for it. Here’s what others have to say about us.
+          Hear from those who found the truth through authentic Islamic knowledge
         </p>
         <div className="mt-12 mx-auto max-w-[97%]">
           <Swiper
@@ -78,6 +78,7 @@ const Testimonials = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+            className="testimonials-carousel"
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id} className="py-8 rounded-3xl">
@@ -108,6 +109,23 @@ const Testimonials = () => {
           </Swiper>
         </div>
       </div>
+
+      {/* Custom Pagination Styles for Testimonials */}
+      <style jsx global>{`
+        .testimonials-carousel .swiper-pagination-bullet {
+          background: #e5e7eb !important;
+          opacity: 0.5;
+          width: 8px;
+          height: 8px;
+          margin: 0 4px;
+        }
+        .testimonials-carousel .swiper-pagination-bullet-active {
+          opacity: 1;
+          background: #6B2FB3 !important;
+          width: 24px;
+          border-radius: 4px;
+        }
+      `}</style>
     </section>
   );
 };

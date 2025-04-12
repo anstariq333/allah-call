@@ -9,7 +9,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const [expandedDropdown, setExpandedDropdown] = useState(null);
 
+  const toggleDropdown = (name) => {
+    setExpandedDropdown(expandedDropdown === name ? null : name);
+  };
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +92,13 @@ export default function Navbar() {
       { name: "Publish Your Work", path: "/publish-your-work" },
     ] },
     { name: "Our Work", path: "/our-work" },
+  ];
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -175,51 +186,74 @@ export default function Navbar() {
 
         {/* Mobile and Tablet Menu */}
         <div
-          className={`lg:hidden fixed inset-0 bg-white z-40 transition-all duration-500 
-            ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
-        >
-          <div className={`h-full overflow-y-auto pt-20 pb-6 transition-transform duration-500 
-            ${isMenuOpen ? 'translate-y-0' : '-translate-y-10'}`}>
-            <ul className="px-6 space-y-2 max-h-[calc(100vh-120px)] overflow-y-auto">
-              {mainLinks.map((link) => (
-                <li key={link.name} className="border-b border-gray-100 last:border-none">
+  className={`lg:hidden fixed inset-0 bg-white z-40 transition-all duration-500 
+    ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+>
+  <div className={`h-full overflow-y-auto pt-20 pb-6 transition-transform duration-500 
+    ${isMenuOpen ? 'translate-y-0' : '-translate-y-10'}`}>
+    <ul className="px-6 space-y-2 max-h-[calc(100vh-120px)] overflow-y-auto">
+      {mainLinks.map((link) => (
+        <li key={link.name} className="border-b border-gray-100 last:border-none">
+          <div className="flex justify-between items-center">
+            <Link
+              href={link.path}
+              className={`block py-3 text-base sm:text-lg ${
+                activeLink === link.name ? 'text-violet-900 font-medium' : 'text-gray-700'
+              } hover:text-violet-900 transition-colors duration-300`}
+              onClick={() => handleLinkClick(link.name)}
+            >
+              {link.name}
+            </Link>
+            {link.subLinks && (
+              <button 
+                onClick={() => toggleDropdown(link.name)}
+                className="p-2 focus:outline-none"
+                aria-expanded={expandedDropdown === link.name}
+                aria-label={`Toggle ${link.name} submenu`}
+              >
+                <svg
+                  className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
+                    expandedDropdown === link.name ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            )}
+          </div>
+          {link.subLinks && (
+            <ul className={`pl-4 pb-2 transition-all duration-300 overflow-hidden ${
+              expandedDropdown === link.name ? 'max-h-96' : 'max-h-0'
+            }`}>
+              {link.subLinks.map((subLink) => (
+                <li key={subLink.name}>
                   <Link
-                    href={link.path}
-                    className={`block py-3 text-base sm:text-lg ${
-                      activeLink === link.name ? 'text-violet-900 font-medium' : 'text-gray-700'
-                    } hover:text-violet-900 transition-colors duration-300`}
-                    onClick={() => handleLinkClick(link.name)}
+                    href={subLink.path}
+                    className="block py-2 text-sm sm:text-base text-gray-600 hover:text-violet-900 
+                      transition-colors duration-300"
+                    onClick={() => handleLinkClick(subLink.name)}
                   >
-                    {link.name}
+                    {subLink.name}
                   </Link>
-                  {link.subLinks && (
-                    <ul className="pl-4 pb-2">
-                      {link.subLinks.map((subLink) => (
-                        <li key={subLink.name}>
-                          <Link
-                            href={subLink.path}
-                            className="block py-2 text-sm sm:text-base text-gray-600 hover:text-violet-900 
-                              transition-colors duration-300"
-                            onClick={() => handleLinkClick(subLink.name)}
-                          >
-                            {subLink.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </li>
               ))}
-              <li className="pt-4">
-                <button className="w-full bg-violet-900 text-white py-2.5 sm:py-3 rounded-full font-medium
-                  hover:bg-violet-800 transition-all duration-300 focus:outline-none 
-                  focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 text-base">
-                  Donate
-                </button>
-              </li>
             </ul>
-          </div>
-        </div>
+          )}
+        </li>
+      ))}
+      <li className="pt-4">
+        <button className="w-full bg-violet-900 text-white py-2.5 sm:py-3 rounded-full font-medium
+          hover:bg-violet-800 transition-all duration-300 focus:outline-none 
+          focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 text-base">
+          Donate
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
       </div>
     </nav>
   );

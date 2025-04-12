@@ -80,7 +80,7 @@ const HomepageFooter = ({ className }) => {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Left Section */}
           <div className="space-y-4 text-center md:text-left  ">
-            <h2 className="text-3xl font-bold text-primary">AllahCall Institute</h2>
+            <Image src="/logo.png" alt="AllahCall Institute" width={300} height={300}   />
             <p className="text-gray-500 text-sm font-semibold">
               For Islamic Thought and Education
             </p>
@@ -90,7 +90,7 @@ const HomepageFooter = ({ className }) => {
           </div>
 
           {/* Center Links */}
-          <div className="flex flex-wrap justify-between md:justify-evenly gap-6 col-span-3">
+          <div className="flex  flex-wrap justify-between md:justify-evenly gap-6 col-span-3">
             {footerLinks.map((section, i) => (
               <FooterColumn key={i} options={section} />
             ))}

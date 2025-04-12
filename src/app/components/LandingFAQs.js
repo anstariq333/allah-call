@@ -42,11 +42,11 @@ const LandingFAQs = () => {
       >
         <div className="mb-[2rem] mt-2 flex h-[100%] w-[100%] flex-col items-center justify-center">
           <div className="flex h-[20%] w-[90%] flex-col items-center justify-center">
-            <h2 className="font-sans text-5xl sm:text-5xl font-bold">
-                   FAQs
+            <h2 className="font-sans text-5xl sm:text-5xl text-[#6B2FB3] font-bold">
+              FAQs
             </h2>
             <p className="text-smallText mt-3 text-xs sm:text-sm">
-              Everything you need to know about AllahCall.
+              Everything you need to know about learning Islam with AllahCall.
             </p>
           </div>
 
@@ -59,9 +59,9 @@ const LandingFAQs = () => {
                 <div className="flex justify-between">
                   <span
                     onClick={() => setDropDownState(!dropDownState)}
-                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base"
+                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base"
                   >
-                    What is AllahCall?
+                    What is AllahCall's dawah mission?
                   </span>
                   <Image
                     src={dropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -73,10 +73,7 @@ const LandingFAQs = () => {
                 </div>
                 {dropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    AllahCall is an online learning platform that offers
-                    thousands of courses in various fields, including
-                    technology, business, design, and personal development. Our
-                    mission is to make quality education accessible to everyone.
+                    AllahCall is a platform dedicated to sharing the beautiful message of Islam through authentic knowledge and understanding. We provide resources, guidance, and support for both Muslims and those interested in learning about Islam.
                   </p>
                 )}
                  {dropDownState && (
@@ -89,8 +86,8 @@ const LandingFAQs = () => {
                 className="border-darkPurple flex flex-col border-b-[1px] py-4 relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base">
-                    How do I enroll in a course?
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
+                    How can I learn about Islam?
                   </span>
                   <Image
                     src={secondDropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -102,9 +99,7 @@ const LandingFAQs = () => {
                 </div>
                 {secondDropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    To enroll in a course, simply browse our catalog, select a
-                    course, and click the "Enroll" button. You can start
-                    learning immediately after purchasing.
+                    You can start by exploring our free resources, joining our online classes, or scheduling a one-on-one session with our qualified scholars. We offer various learning paths tailored to your level of understanding.
                   </p>
                 )}
                  {secondDropDownState && (
@@ -117,8 +112,8 @@ const LandingFAQs = () => {
                 className="border-darkPurple flex flex-col border-b-[1px] py-4 relative"
               >
                 <div className="flex justify-between">
-                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base">
-                    Do I get lifetime access to courses?
+                  <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
+                    Are your teachings authentic?
                   </span>
                   <Image
                     src={thirdDropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -130,9 +125,7 @@ const LandingFAQs = () => {
                 </div>
                 {thirdDropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    Yes! Once you purchase a course, you get lifetime access,
-                    allowing you to learn at your own pace without any time
-                    restrictions.
+                    Yes! All our content is based on authentic sources from the Quran and Sunnah, verified by qualified scholars. We ensure that all information provided is accurate and properly referenced.
                   </p>
                 )}
                 {thirdDropDownState && (
@@ -147,9 +140,9 @@ const LandingFAQs = () => {
                 <div className="flex justify-between">
                   <span
                     onClick={() => setDropDownState(!fourthDropDownState)}
-                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm  sm:text-base"
+                    className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base"
                   >
-                    Can I get a refund if I’m not satisfied?
+                    Can I ask questions about Islam?
                   </span>
                   <Image
                     src={fourthDropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -161,9 +154,7 @@ const LandingFAQs = () => {
                 </div>
                 {fourthDropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    Absolutely! We offer a 30-day money-back guarantee if you're
-                    not satisfied with your purchase. Just contact our support
-                    team for assistance.
+                    Absolutely! We encourage questions and open dialogue. You can ask questions during live sessions, through our community forum, or schedule a private consultation with our scholars.
                   </p>
                 )}
                  {fourthDropDownState && (
@@ -177,7 +168,7 @@ const LandingFAQs = () => {
               >
                 <div className="flex justify-between">
                   <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
-                    Can I access courses on mobile devices?
+                    Do you offer support for new Muslims?
                   </span>
                   <Image
                     src={fifthDropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -189,9 +180,7 @@ const LandingFAQs = () => {
                 </div>
                 {fifthDropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    Yes! You can access all AllahCall courses on your
-                    desktop, tablet, or mobile device. We also have a mobile app
-                    for learning on the go.
+                    Yes! We provide special support and guidance for new Muslims, including beginner courses, mentorship programs, and a welcoming community to help you on your journey.
                   </p>
                 )}
                  {fifthDropDownState && (
@@ -205,7 +194,7 @@ const LandingFAQs = () => {
               >
                 <div className="flex justify-between">
                   <span className="cursor-pointer font-sans font-semibold tracking-wide text-sm sm:text-base">
-                    Will I receive a certificate after completing a course?
+                    How can I support the dawah work?
                   </span>
                   <Image
                     src={sixthDropDownState ? "/dropup.png" : "/drop-down.png"}
@@ -217,9 +206,7 @@ const LandingFAQs = () => {
                 </div>
                 {sixthDropDownState && (
                   <p className="text-smallText mt-3 cursor-pointer text-sm">
-                    Yes! Upon completing a course, you will receive a
-                    certificate of completion, which you can share on LinkedIn,
-                    add to your resume, or showcase in your portfolio.
+                    You can support our dawah work by sharing our content, volunteering, donating to our projects, or participating in our community events. Every contribution helps spread the message of Islam.
                   </p>
                 )}
                 {sixthDropDownState && (

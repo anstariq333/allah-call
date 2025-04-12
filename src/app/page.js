@@ -6,7 +6,9 @@ import LearningSection from './components/LearningSection';
 import Navbar from "./components/Navbar";
 import OurWork from './components/OurWork';
 import Testimonials from './components/Testimonials';
-import VisionFocus from './components/VisionFocus';
+import AboutUs from './components/AboutUs';
+import OurMission from './components/OurMission';
+import Team from './components/Team';
 
 export default function Home() {
   return (
@@ -14,9 +16,11 @@ export default function Home() {
      
       <Navbar/>
        <HeroCarousel/>
-       <VisionFocus/>
+       <AboutUs/>
+       <OurMission />
+       <LearningSection />
          <OurWork/>
-        <LearningSection />
+         <Team/>
         <Testimonials/>
         <LandingFAQs/>
         <Footer/>

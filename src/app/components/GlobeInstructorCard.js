@@ -1,27 +1,27 @@
 import ImageCssBg from "./ImageCssBg";
 const reviews = [
   {
-    name: " Engineer Hafiz Haris",
-    role: "Mentor",
+    name: "Hafiz Muhammed Haris",
+    role: "Senior Scholar",
     experience: [
-      "10+ Years of average mentor experience.",
-      "Access to live Q&A, workshops, and 1-on-1 sessions.",
+      "15+ Years of Islamic teaching experience",
+      "Specializes in Quranic studies and Hadith sciences",
     ],
   },
   {
-    name: "Engineer Hafiz Haris",
-    role: "Instructor",
+    name: "Ustadh Ahmad Hassan",
+    role: "Dawah Coordinator",
     experience: [
-      "7+ Years of experience in web development.",
-      "Expert in front-end technologies like React and Angular.",
+      "10+ Years in Islamic outreach programs",
+      "Expert in comparative religion and interfaith dialogue",
     ],
   },
   {
-    name: "Engineer Hafiz Haris",
-    role: "Guider",
+    name: "Dr. Fatima Zahra",
+    role: "Islamic Educator",
     experience: [
-      "5+ Years of data science experience.",
-      "Specializes in machine learning and AI projects.",
+      "12+ Years in Islamic education",
+      "Focus on women's Islamic studies and family counseling",
     ],
   },
 ];
@@ -76,8 +76,8 @@ function GlobeInstructorCard() {
         </div>
       </div>
       <ul className="text-xs font-medium text-[#000F27]">
-        <li>10+ Years of average mentor experience.</li>
-        <li>Access to live Q&A, workshops, and 1-on-1 sessions.</li>
+      <li> 10+ Years of Islamic dawah experience.</li>
+      <li>Access to live guidance, workshops, and 1-on-1 sessions.</li>
       </ul>
     </div>
   );
