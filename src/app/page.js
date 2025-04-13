@@ -18,13 +18,11 @@ export default function Home() {
        <HeroCarousel/>
        <AboutUs/>
        <OurMission />
-       <LearningSection />
          <OurWork/>
+         <LearningSection />
          <Team/>
         <Testimonials/>
         <LandingFAQs/>
-        <Footer/>
-      
     </main>
   );
 }

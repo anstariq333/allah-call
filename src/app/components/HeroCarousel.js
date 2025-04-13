@@ -70,10 +70,10 @@ const HeroCarousel = () => {
                     {slide.subtitle}
                   </span>
                 </h1>
-                <p className="mt-4 hidden sm:block text-lg md:text-xl text-gray-100 max-w-2xl mx-auto">
+                <p className="mt-4 hidden md:block text-lg md:text-base lg:text-lg text-gray-100 max-w-[60%] mx-auto">
                   {slide.description}
                 </p>
-                <div className="pt-8">
+                <div className="pt-8 sm:pt-0 lg:pt-8">
                   <button className="bg-[#f58875] hover:text-primary text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
                     Discover More
                   </button>

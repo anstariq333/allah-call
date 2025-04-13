@@ -1,12 +1,14 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "../styles/global.css"
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AllahCall - Islamic Learning Platform",
-  description: "Discover the beautiful message of Islam through authentic knowledge and understanding",
+  title: "AllahCall - Islamic Dawah Platform",
+  description: "A platform dedicated to spreading authentic Islamic knowledge and connecting people with the message of Islam.",
   icons: {
     icon: [
       {
@@ -44,7 +46,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

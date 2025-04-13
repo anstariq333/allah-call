@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
@@ -8,11 +10,11 @@ const footerLinks = [
     label: "Company",
     options: [
       { label: "About", href: "/about" },
-      { label: "Courses", href: "/courses" },
-      { label: "Career Counselling", href: "/career-counseling" },
-      { label: "Live Session", href: "/bootcamp" },
+      { label: "Islam", href: "/islam" },
+      { label: "New Muslims", href: "/new-muslims" },
+      { label: "programs", href: "/programs" },
       { label: "FAQ", href: "/#faq" },
-      { label: "Terms of Services", href: "/terms-&-conditions" },
+      { label: "Our Services", href: "/our-services" },
     ],
   },
   {

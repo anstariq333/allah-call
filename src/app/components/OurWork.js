@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const workItems = [
   {
-    title: "Learning Platform",
+    title: "SHAHADA",
     image: "/learning.png",
   },
   {
-    title: "Books",
+    title: "COURSES",
     image: "/hero.png",
   },
   {
-    title: "Our Channel",
+    title: "PUBLISH",
     image: "/mosque.png",
   },
  
@@ -24,7 +24,7 @@ export default function OurWork() {
         {workItems.map((item, index) => (
           <div
             key={index}
-            className="relative h-[30rem] rounded-lg overflow-hidden g shadow-md border border-gray-200 transition hover:border-purple-600 hover:shadow-2xl-purple"
+            className="relative h-[25rem] rounded-lg overflow-hidden g shadow-md border border-gray-200 transition hover:border-purple-600 hover:shadow-2xl-purple"
           >
             <Image
               src={item.image}

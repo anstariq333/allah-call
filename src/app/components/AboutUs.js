@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const AboutUs = () => {
   return (
     <section className="container mx-auto px-4 py-8 md:py-10">
-      <div className="max-w-[85%] md:max-w-[97%] lg:max-w-[85%] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
+      <div className="max-w-[97%] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
         {/* Left side - Image */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
