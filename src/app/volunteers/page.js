@@ -120,24 +120,43 @@ export default function VolunteersPage() {
         {/* Application Form */}
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Apply to Volunteer</h2>
-          <form className="space-y-6">
+          <form 
+            action="https://formspree.io/f/mvgaewpr"
+            method="POST"
+            className="space-y-6"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-gray-700 mb-2">Full Name</label>
-                <input type="text" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" />
+                <input 
+                  type="text" 
+                  name="name"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" 
+                />
               </div>
               <div>
                 <label className="block text-gray-700 mb-2">Email</label>
-                <input type="email" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" />
+                <input 
+                  type="email" 
+                  name="email"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" 
+                />
               </div>
             </div>
             <div>
               <label className="block text-gray-700 mb-2">Phone Number</label>
-              <input type="tel" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" />
+              <input 
+                type="tel" 
+                name="phone"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]" 
+              />
             </div>
             <div>
               <label className="block text-gray-700 mb-2">Preferred Role</label>
-              <select className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]">
+              <select 
+                name="role"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"
+              >
                 <option>Select a role</option>
                 {volunteerRoles.map((role, index) => (
                   <option key={index}>{role.title}</option>
@@ -146,9 +165,16 @@ export default function VolunteersPage() {
             </div>
             <div>
               <label className="block text-gray-700 mb-2">Why do you want to volunteer with us?</label>
-              <textarea rows="4" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"></textarea>
+              <textarea 
+                name="message"
+                rows="4" 
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"
+              ></textarea>
             </div>
-            <button type="submit" className="w-full bg-[#f58875] text-white py-3 rounded-lg hover:bg-[#e67a68] transition">
+            <button 
+              type="submit" 
+              className="w-full bg-[#f58875] text-white py-3 rounded-lg hover:bg-[#e67a68] transition"
+            >
               Submit Application
             </button>
           </form>
