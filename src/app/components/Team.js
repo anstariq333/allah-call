@@ -11,7 +11,7 @@ const Team = () => {
       id: 1,
       name: "Hafiz Muhammad Haris",
       role: "Founder & CEO",
-      image: "/mosque.png",
+      image: "/hafiz.jpeg",
       social: {
         facebook: "#",
         twitter: "#",
@@ -22,7 +22,7 @@ const Team = () => {
       id: 2,
       name: "Hafiz Muhammad Haris",
       role: "Islamic Scholar",
-      image: "/mosque.png",
+      image: "/almubeen.jpeg",
       social: {
         facebook: "#",
         twitter: "#",
