@@ -9,7 +9,7 @@ export default function EventsPage() {
       time: "10:00 AM - 5:00 PM",
       location: "Islamic Center, New York",
       description: "A day-long conference featuring renowned scholars discussing various aspects of Islamic knowledge and contemporary issues.",
-      image: "/images/conference.jpg"
+      image: "/event.jpg"
     },
     {
       title: "Quran Recitation Competition",
@@ -49,9 +49,9 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[450px] w-full">
         <Image
-          src="/mosque.png"
+          src="/main-event.jpg"
           alt="Events"
           fill
           className="object-cover"

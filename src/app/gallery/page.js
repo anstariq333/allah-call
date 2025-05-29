@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import AllahCallGrid from '../components/AllahCallGrid';
 
 export default function GalleryPage() {
   const galleryCategories = [
@@ -42,10 +43,12 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+    
+
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1623439844752-524658b16ce6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Gallery"
           fill
           className="object-cover"
@@ -67,6 +70,8 @@ export default function GalleryPage() {
           </p>
         </div>
 
+
+         
         {/* Gallery Categories */}
         {galleryCategories.map((category, index) => (
           <div key={index} className="mb-16">
@@ -90,6 +95,9 @@ export default function GalleryPage() {
             </div>
           </div>
         ))}
+
+         {/* AllahCallGrid Section */}
+         <AllahCallGrid />
 
         {/* Share Your Photos */}
         <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">

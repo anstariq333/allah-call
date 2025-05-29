@@ -46,9 +46,9 @@ export default function QuranSunnahPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="/quran&sunnah.jpg"
           alt="Quran & Sunnah"
           fill
           className="object-cover"

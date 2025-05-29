@@ -42,9 +42,9 @@ export default function HinduismPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[450px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1625050795880-ae615b56da68?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Hinduism"
           fill
           className="object-cover"

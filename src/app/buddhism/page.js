@@ -25,7 +25,7 @@ export default function BuddhismPage() {
     {
       title: "Understanding Buddhism",
       content: "Buddhism is a path of spiritual development leading to insight into the true nature of reality, founded by Siddhartha Gautama in ancient India.",
-      image: "/images/buddhism-overview.jpg"
+      image: "/buddism.jpg"
     },
     {
       title: "Historical Connections",
@@ -42,9 +42,9 @@ export default function BuddhismPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="/buddism.jpg"
           alt="Buddhism"
           fill
           className="object-cover"

@@ -42,9 +42,9 @@ export default function JudaismPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="/juadism.jpg"
           alt="Judaism"
           fill
           className="object-cover"

@@ -20,7 +20,7 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Hafiz Muhammad Haris",
+      name: "Ya'qub Nuri Amin",
       role: "Islamic Scholar",
       image: "/almubeen.jpeg",
       social: {
@@ -31,9 +31,9 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "Hafiz Muhammad Haris",
-      role: "Islamic Scholar",
-      image: "/mosque.png",
+      name: " Muhammad Zeeshan",
+      role: "Marketing Manager",
+      image: "/Zeeshan.jpeg",
       social: {
         facebook: "#",
         twitter: "#",
