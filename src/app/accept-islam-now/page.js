@@ -27,7 +27,7 @@ export default function AcceptIslamNowPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1627818653012-054f17eb0648?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"

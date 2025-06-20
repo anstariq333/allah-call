@@ -8,25 +8,41 @@ export default function OurWorkPage() {
       title: "Global Dawah Impact",
       stats: "50,000+",
       description: "People reached through our dawah programs worldwide",
-      image: "/images/dawah.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
     },
     {
       title: "New Muslims Support",
       stats: "5,000+",
       description: "New Muslims guided and supported in their journey",
-      image: "/images/new-muslims.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+        </svg>
+      )
     },
     {
       title: "Islamic Education",
       stats: "10,000+",
       description: "Students enrolled in our various Islamic courses",
-      image: "/images/education.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
     },
     {
       title: "Community Building",
       stats: "100+",
       description: "Community events and programs organized annually",
-      image: "/images/community.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
     }
   ];
 
@@ -96,8 +112,8 @@ export default function OurWorkPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
-          alt="Beautiful Mosque"
+          src="/event.jpg"
+          alt="our work"
           fill
           className="object-cover"
           priority
@@ -110,12 +126,6 @@ export default function OurWorkPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Making a difference through Islamic education and community service
             </p>
-            <Link href="#achievements" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              View Our Impact
-            </Link>
           </div>
         </div>
       </div>
@@ -127,14 +137,9 @@ export default function OurWorkPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Impact</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="relative h-48">
-                  <Image
-                    src={achievement.image}
-                    alt={achievement.title}
-                    fill
-                    className="object-cover"
-                  />
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="h-48 bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 flex items-center justify-center">
+                  {achievement.icon}
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{achievement.title}</h3>
@@ -210,12 +215,12 @@ export default function OurWorkPage() {
             Support our work and be part of making a positive impact in the community.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" 
+          <Link href="/volunteers" 
               className="inline-block bg-[#f58875] text-white px-6 py-3 rounded-full 
                 font-medium hover:bg-[#e57764] transition-all duration-300">
               Support Our Work
             </Link>
-            <Link href="/volunteer" 
+            <Link href="/volunteers" 
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
                 transition-all duration-300">

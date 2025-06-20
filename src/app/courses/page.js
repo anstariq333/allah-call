@@ -62,7 +62,7 @@ export default function CoursesPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1711202675885-d0a0ce63b5bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"

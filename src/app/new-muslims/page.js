@@ -54,7 +54,7 @@ export default function NewMuslimsPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="http://images.unsplash.com/photo-1616596871445-bb8290a7a2c2?q=80&w=1107&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"

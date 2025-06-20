@@ -61,7 +61,7 @@ export default function CompanionshipPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1681505526188-b05e68c77582?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
@@ -76,7 +76,7 @@ export default function CompanionshipPage() {
               Journey together with experienced Muslim mentors
             </p>
             <Link href="#apply" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
+              className="inline-block bg-[#f58875] text-white px-8 py-3 mt-12 rounded-full 
                 text-lg font-medium hover:bg-[#e57764] transition-all duration-300
                 transform hover:-translate-y-1 hover:shadow-lg">
               Join Program

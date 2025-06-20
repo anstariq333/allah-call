@@ -13,7 +13,12 @@ export default function PublishWorkPage() {
         "Clear writing style",
         "Relevant to Islamic studies"
       ],
-      image: "/images/articles.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="2" />
+          <path strokeWidth="2" d="M7 8h10M7 12h6M7 16h8" />
+        </svg>
+      )
     },
     {
       title: "Books",
@@ -24,7 +29,12 @@ export default function PublishWorkPage() {
         "Proper formatting",
         "Clear objectives"
       ],
-      image: "/images/books.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M12 20l9-5-9-5-9 5 9 5z" />
+          <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M12 12V4l9 5-9 5-9-5 9-5v8z" />
+        </svg>
+      )
     },
     {
       title: "Research Papers",
@@ -35,7 +45,13 @@ export default function PublishWorkPage() {
         "Detailed references",
         "Clear conclusions"
       ],
-      image: "/images/research.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="4" y="4" width="16" height="16" rx="2" strokeWidth="2" />
+          <path strokeWidth="2" d="M8 8h8M8 12h4M8 16h6" />
+          <circle cx="16" cy="16" r="2" strokeWidth="2" />
+        </svg>
+      )
     },
     {
       title: "Educational Materials",
@@ -46,7 +62,12 @@ export default function PublishWorkPage() {
         "Clear instructions",
         "Engaging format"
       ],
-      image: "/images/education.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2" strokeWidth="2" />
+          <path strokeWidth="2" d="M16 3v4M8 3v4M3 9h18" />
+        </svg>
+      )
     }
   ];
 
@@ -72,9 +93,9 @@ export default function PublishWorkPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[500px] w-full object-center">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
@@ -114,12 +135,7 @@ export default function PublishWorkPage() {
           {publicationTypes.map((type, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative h-48">
-                <Image
-                  src={type.image}
-                  alt={type.title}
-                  fill
-                  className="object-cover"
-                />
+                {type.icon}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{type.title}</h3>

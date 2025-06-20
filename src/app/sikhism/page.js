@@ -44,7 +44,7 @@ export default function SikhismPage() {
       {/* Hero Section */}
       <div className="relative h-[400px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1642355099716-a88a41a17887?q=80&w=1557&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Sikhism"
           fill
           className="object-cover"

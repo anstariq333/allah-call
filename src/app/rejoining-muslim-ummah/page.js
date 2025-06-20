@@ -13,7 +13,11 @@ export default function RejoiningUmmahPage() {
         "Spiritual Guidance",
         "Progress Tracking"
       ],
-      image: "/images/guidance.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197" />
+        </svg>
+      )
     },
     {
       title: "Community Integration",
@@ -24,7 +28,11 @@ export default function RejoiningUmmahPage() {
         "Volunteer Opportunities",
         "Social Gatherings"
       ],
-      image: "/images/community.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
     },
     {
       title: "Educational Support",
@@ -35,7 +43,11 @@ export default function RejoiningUmmahPage() {
         "Workshops",
         "Online Resources"
       ],
-      image: "/images/education.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
     },
     {
       title: "Practical Assistance",
@@ -46,7 +58,11 @@ export default function RejoiningUmmahPage() {
         "Social Services",
         "Cultural Adaptation"
       ],
-      image: "/images/assistance.jpg"
+      icon: (
+        <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17v1a3 3 0 003 3h4a3 3 0 003-3v-1M12 12v4m0 0v4m0-4h4m-4 0H8" />
+        </svg>
+      )
     }
   ];
 
@@ -74,7 +90,7 @@ export default function RejoiningUmmahPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="/main-event.jpg"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
@@ -88,12 +104,6 @@ export default function RejoiningUmmahPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Support and guidance for reconnecting with the Muslim community
             </p>
-            <Link href="#support" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              Explore Support
-            </Link>
           </div>
         </div>
       </div>
@@ -114,12 +124,7 @@ export default function RejoiningUmmahPage() {
           {supportAreas.map((area, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative h-48">
-                <Image
-                  src={area.image}
-                  alt={area.title}
-                  fill
-                  className="object-cover"
-                />
+                {area.icon}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{area.title}</h3>

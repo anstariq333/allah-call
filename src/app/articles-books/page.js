@@ -51,19 +51,19 @@ export default function ArticlesBooksPage() {
       title: "The Sealed Nectar",
       author: "Safiur-Rahman Al-Mubarakpuri",
       description: "A comprehensive biography of Prophet Muhammad (PBUH).",
-      image: "/images/sealed-nectar.jpg"
+      image: "/ScaredNector.png"
     },
     {
       title: "The Divine Reality",
       author: "Hamza Andreas Tzortzis",
       description: "A philosophical exploration of God's existence.",
-      image: "/images/divine-reality.jpg"
+      image: "/divine-reality.png"
     },
     {
       title: "Purification of the Heart",
       author: "Hamza Yusuf",
       description: "Signs, symptoms and cures of the spiritual diseases of the heart.",
-      image: "/images/purification.jpg"
+      image: "/there-is-god.png"
     }
   ];
 
@@ -72,7 +72,7 @@ export default function ArticlesBooksPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1599488059966-a42a2ab36991?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
