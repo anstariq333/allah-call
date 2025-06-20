@@ -17,7 +17,7 @@ export default function EventsPage() {
       time: "2:00 PM - 6:00 PM",
       location: "Community Hall, Chicago",
       description: "Annual Quran recitation competition for all age groups with prizes and certificates.",
-      image: "/images/quran-competition.jpg"
+      image: "https://images.unsplash.com/photo-1712249239061-7d4f49ec9d44?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "New Muslims Support Group",
@@ -25,7 +25,7 @@ export default function EventsPage() {
       time: "3:00 PM - 5:00 PM",
       location: "Online",
       description: "Weekly support group for new Muslims to learn, share experiences, and build community.",
-      image: "/images/support-group.jpg"
+      image: "https://images.unsplash.com/photo-1712249237537-8c5a0420653b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
@@ -35,14 +35,14 @@ export default function EventsPage() {
       date: "February 10, 2024",
       location: "Community Center, Los Angeles",
       description: "A successful event bringing together people of different faiths to promote understanding and harmony.",
-      image: "/images/interfaith.jpg"
+      image: "https://images.unsplash.com/photo-1627818653012-054f17eb0648?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Islamic Art Exhibition",
       date: "January 20, 2024",
       location: "Art Gallery, Houston",
       description: "Showcasing beautiful Islamic calligraphy and artwork from local artists.",
-      image: "/images/art-exhibition.jpg"
+      image: "https://images.unsplash.com/photo-1549128967-147ab17d5415?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

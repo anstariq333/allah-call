@@ -8,40 +8,40 @@ export default function ReligionsPage() {
       name: "Christianity",
       path: "/christianity",
       description: "Explore the relationship between Islam and Christianity, common grounds, and respectful dialogue.",
-      image: "/images/christianity.jpg"
+      image: "/bible.jpg"
     },
     {
       name: "Judaism",
       path: "/judaism",
       description: "Understand the historical and theological connections between Islam and Judaism.",
-      image: "/images/judaism.jpg"
+      image: "/juadism.jpg"
     },
     {
       name: "Hinduism",
       path: "/hinduism",
       description: "Learn about Hindu beliefs and practices, and Islamic perspectives on interfaith dialogue.",
-      image: "/images/hinduism.jpg"
+      image: "https://images.unsplash.com/photo-1625050795880-ae615b56da68?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Buddhism",
       path: "/buddhism",
       description: "Discover Buddhist teachings and opportunities for meaningful interfaith understanding.",
-      image: "/images/buddhism.jpg"
+      image: "/buddism.jpg"
     },
     {
       name: "Sikhism",
       path: "/sikhism",
       description: "Explore Sikh beliefs and traditions, and the importance of mutual respect and understanding.",
-      image: "/images/sikhism.jpg"
+      image: "https://images.unsplash.com/photo-1642355099716-a88a41a17887?q=80&w=1557&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/images/religions-hero.jpg"
+          src="https://images.unsplash.com/photo-1742223996745-cedb68f57e52?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="World Religions"
           fill
           className="object-cover"

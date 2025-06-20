@@ -6,19 +6,19 @@ export default function IslamPage() {
     {
       title: "The Five Pillars of Islam",
       description: "Learn about the fundamental practices that form the foundation of a Muslim's faith and worship.",
-      image: "/images/pillars.jpg",
+      image: "https://images.unsplash.com/photo-1744264362119-bd94511b0597?q=80&w=1156&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/islam/pillars"
     },
     {
       title: "The Six Articles of Faith",
       description: "Understand the core beliefs that every Muslim must hold in their heart.",
-      image: "/images/faith.jpg",
+      image: "https://images.unsplash.com/photo-1579305796288-c534f6cf17ab?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/islam/faith"
     },
     {
       title: "The Life of Prophet Muhammad (PBUH)",
       description: "Explore the life and teachings of the final Messenger of Allah.",
-      image: "/images/prophet.jpg",
+      image: "https://images.unsplash.com/photo-1692977579997-948328cdb7d2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "/islam/prophet"
     }
   ];
@@ -26,9 +26,9 @@ export default function IslamPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1587617425953-9075d28b8c46?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=" Islam"
           fill
           className="object-cover"
@@ -55,7 +55,7 @@ export default function IslamPage() {
           <Link href="/quran-sunnah" className="block p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
             <div className="relative h-48 mb-4">
               <Image
-                src="/images/quran.jpg"
+                src="/quran&sunnah.jpg"
                 alt="Quran & Sunnah"
                 fill
                 className="object-cover rounded-lg"
@@ -67,7 +67,7 @@ export default function IslamPage() {
           <Link href="/dawah" className="block p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
             <div className="relative h-48 mb-4">
               <Image
-                src="/images/dawah.jpg"
+                src="https://images.unsplash.com/photo-1627818653012-054f17eb0648?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Dawah"
                 fill
                 className="object-cover rounded-lg"
@@ -79,7 +79,7 @@ export default function IslamPage() {
           <Link href="/marriage" className="block p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
             <div className="relative h-48 mb-4">
               <Image
-                src="/images/marriage.jpg"
+                src="/wedding.jpg"
                 alt="Islam & Marriage"
                 fill
                 className="object-cover rounded-lg"

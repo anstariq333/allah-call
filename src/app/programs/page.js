@@ -8,13 +8,21 @@ export default function ProgramsPage() {
       title: "Companionship Program",
       description: "Connect with experienced Muslims who will guide and support you on your Islamic journey through one-on-one mentorship.",
       path: "/companionship",
-      image: "/images/companionship.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
     },
     {
       title: "Islamic Courses",
       description: "Comprehensive courses on various Islamic topics, from basic fundamentals to advanced studies in Quran and Sunnah.",
       path: "/courses",
-      image: "/images/courses.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
     }
   ];
 
@@ -42,7 +50,7 @@ export default function ProgramsPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1660795670724-0dfa88fc1dda?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
@@ -56,12 +64,7 @@ export default function ProgramsPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Embark on your journey of Islamic knowledge with structured guidance
             </p>
-            <Link href="#explore" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              Explore Programs
-            </Link>
+          
           </div>
         </div>
       </div>
@@ -83,15 +86,10 @@ export default function ProgramsPage() {
             <Link href={program.path} key={index}>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl 
                 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="relative h-48">
-                  <Image
-                    src={program.image}
-                    alt={program.title}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="h-48 bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 flex items-center justify-center">
+                  {program.icon}
                 </div>
-                <div className="p-6">
+                <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h3>
                   <p className="text-gray-600">{program.description}</p>
                 </div>

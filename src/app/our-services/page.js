@@ -8,25 +8,41 @@ export default function OurServicesPage() {
       title: "Articles & Books",
       description: "Access a rich collection of Islamic literature, articles, and educational materials.",
       path: "/articles-books",
-      image: "/images/articles.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
     },
     {
       title: "Muslim Revival",
       description: "Programs and resources to strengthen faith and reconnect with Islamic teachings.",
       path: "/muslim-revival",
-      image: "/images/revival.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+        </svg>
+      )
     },
     {
       title: "Rejoining Muslim Ummah",
       description: "Support and guidance for those seeking to reconnect with the Muslim community.",
       path: "/rejoining-muslim-ummah",
-      image: "/images/ummah.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      )
     },
     {
       title: "Publish Your Work",
       description: "Platform for scholars and writers to share their Islamic knowledge and research.",
       path: "/publish-your-work",
-      image: "/images/publish.jpg"
+      icon: (
+        <svg className="w-16 h-16 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v4a1 1 0 001 1h3m10-5h2a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h2m4 0V3m0 4a1 1 0 001-1V3a1 1 0 00-1-1 1 1 0 00-1 1v3a1 1 0 001 1z" />
+        </svg>
+      )
     }
   ];
 
@@ -54,7 +70,7 @@ export default function OurServicesPage() {
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
-          src="/mosque.png"
+          src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Beautiful Mosque"
           fill
           className="object-cover"
@@ -68,12 +84,6 @@ export default function OurServicesPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Comprehensive resources and support for your Islamic journey
             </p>
-            <Link href="#services" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              Explore Services
-            </Link>
           </div>
         </div>
       </div>
@@ -95,15 +105,10 @@ export default function OurServicesPage() {
             <Link href={service.path} key={index}>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl 
                 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="relative h-48">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
+                <div className="h-48 bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 flex items-center justify-center">
+                  {service.icon}
                 </div>
-                <div className="p-6">
+                <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>

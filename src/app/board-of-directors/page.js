@@ -6,11 +6,6 @@ import dynamic from 'next/dynamic';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-// Dynamically import Three.js to avoid SSR issues
-const SpaceScene = dynamic(() => import('../components/SpaceScene'), { 
-  ssr: false,
-  loading: () => <div className="absolute inset-0 bg-gradient-to-b from-indigo-900 to-purple-900" />
-});
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -114,12 +109,10 @@ export default function BoardOfDirectorsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-indigo-50 overflow-hidden">
       {/* Animated Space Background */}
-      <div className="fixed inset-0 -z-10 opacity-20">
-        <SpaceScene />
-      </div>
+ 
 
       {/* Hero Section with Parallax */}
-      <div className="relative h-screen max-h-[400px] w-full flex items-center justify-center overflow-hidden">
+      <div className="relative h-screen max-h-[500px] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
         <Image
           src="/b-o-d.jpg"
