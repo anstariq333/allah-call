@@ -25,17 +25,17 @@ export default function HinduismPage() {
     {
       title: "Understanding Hinduism",
       content: "Hinduism is one of the world's oldest religions, with rich traditions of philosophy, spirituality, and cultural practices spanning thousands of years.",
-      image: "/images/hinduism-overview.jpg"
+      image: "https://images.unsplash.com/photo-1622633942053-003f7d31c07d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Cultural Heritage",
       content: "India's rich cultural heritage has historically fostered peaceful coexistence between Hindu and Muslim communities, sharing art, literature, and music.",
-      image: "/images/indo-islamic.jpg"
+      image: "https://images.unsplash.com/photo-1664532673307-91bf52511020?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Interfaith Dialogue",
       content: "Building bridges through understanding and respect, focusing on shared values and peaceful coexistence.",
-      image: "/images/hindu-muslim-dialogue.jpg"
+      image: "https://images.unsplash.com/photo-1652535281291-e818d4bcf5b9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

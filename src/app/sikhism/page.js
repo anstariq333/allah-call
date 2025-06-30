@@ -25,17 +25,17 @@ export default function SikhismPage() {
     {
       title: "Understanding Sikhism",
       content: "Sikhism is a monotheistic religion founded by Guru Nanak Dev Ji in the Punjab region, emphasizing devotion to one God and service to humanity.",
-      image: "/images/sikhism-overview.jpg"
+      image: "https://images.unsplash.com/photo-1546688532-18292333f5a6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Historical Relations",
       content: "The history of Sikh-Muslim relations spans centuries, with periods of both cooperation and challenges, particularly in the Indian subcontinent.",
-      image: "/images/sikh-muslim-history.jpg"
+      image: "https://images.unsplash.com/photo-1733158175513-9427291425a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Modern Dialogue",
       content: "Contemporary initiatives focus on building bridges between Sikh and Muslim communities through dialogue and mutual understanding.",
-      image: "/images/interfaith-dialogue.jpg"
+      image: "https://images.unsplash.com/photo-1652535281291-e818d4bcf5b9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

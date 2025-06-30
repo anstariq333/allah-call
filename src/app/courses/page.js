@@ -1,8 +1,12 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
 
+  
 export default function CoursesPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
   const courses = [
     {
       title: "Fundamentals of Islam",
@@ -10,7 +14,7 @@ export default function CoursesPage() {
       duration: "8 weeks",
       description: "Learn the basic principles of Islam, including beliefs, prayers, and essential practices.",
       topics: ["Islamic Beliefs", "Five Pillars", "Prayer Basics", "Purification"],
-      image: "/images/fundamentals.jpg"
+      image: "https://images.unsplash.com/photo-1544685584-9d18c3420eb4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Quran Reading",
@@ -18,7 +22,7 @@ export default function CoursesPage() {
       duration: "12 weeks",
       description: "Master Quran recitation with proper tajweed rules and pronunciation.",
       topics: ["Arabic Letters", "Tajweed Rules", "Recitation Practice", "Memorization Techniques"],
-      image: "/images/quran.jpg"
+      image: "https://images.unsplash.com/photo-1582033133673-0191060657a9?q=80&w=1072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Islamic Ethics & Character",
@@ -26,7 +30,7 @@ export default function CoursesPage() {
       duration: "6 weeks",
       description: "Develop noble character traits based on Islamic teachings and prophetic guidance.",
       topics: ["Islamic Morals", "Prophet's Character", "Social Ethics", "Family Values"],
-      image: "/images/ethics.jpg"
+      image: "https://images.unsplash.com/photo-1589366786784-20a72800cebb?q=80&w=1037&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Advanced Islamic Studies",
@@ -34,7 +38,7 @@ export default function CoursesPage() {
       duration: "16 weeks",
       description: "Deep dive into Islamic sciences, including fiqh, hadith, and tafseer.",
       topics: ["Usul al-Fiqh", "Hadith Studies", "Tafseer", "Contemporary Issues"],
-      image: "/images/advanced.jpg"
+      image: "https://images.unsplash.com/photo-1652751207037-f6f5097fdb9a?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
@@ -76,12 +80,7 @@ export default function CoursesPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Structured learning paths for your Islamic education
             </p>
-            <Link href="#courses" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              Browse Courses
-            </Link>
+           
           </div>
         </div>
       </div>
@@ -178,20 +177,23 @@ export default function CoursesPage() {
             Contact us to learn more about course schedules, fees, and enrollment process.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" 
-              className="inline-block bg-[#f58875] text-white px-6 py-3 rounded-full 
-                font-medium hover:bg-[#e57764] transition-all duration-300">
-              Enroll Now
-            </Link>
-            <Link href="/contact" 
+          <button
+              onClick={() => setShowContactModal(true)}
+              className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
+                font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
+                transition-all duration-300">
+              Contact Us
+            </button>
+            {/* <Link href="/contact" 
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
                 transition-all duration-300">
               Request Information
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

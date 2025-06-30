@@ -1,8 +1,11 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
+ 
 export default function ArticlesBooksPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
   const categories = [
     {
       title: "Islamic Beliefs",
@@ -60,9 +63,9 @@ export default function ArticlesBooksPage() {
       image: "/divine-reality.png"
     },
     {
-      title: "Purification of the Heart",
-      author: "Hamza Yusuf",
-      description: "Signs, symptoms and cures of the spiritual diseases of the heart.",
+      title: "There is a GOD",
+      author: "Engineer Hafiz Muhmmad harris",
+      description: "Islamic proofs of God's existence through Quran and logic.",
       image: "/there-is-god.png"
     }
   ];
@@ -86,12 +89,12 @@ export default function ArticlesBooksPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Explore our collection of Islamic literature and educational resources
             </p>
-            <Link href="#categories" 
+            {/* <Link href="#categories" 
               className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
                 text-lg font-medium hover:bg-[#e57764] transition-all duration-300
                 transform hover:-translate-y-1 hover:shadow-lg">
               Browse Resources
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -171,20 +174,22 @@ export default function ArticlesBooksPage() {
             Access our complete collection of articles and books to deepen your Islamic knowledge.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" 
+            {/* <Link href="/contact" 
               className="inline-block bg-[#f58875] text-white px-6 py-3 rounded-full 
                 font-medium hover:bg-[#e57764] transition-all duration-300">
               Request Access
-            </Link>
-            <Link href="/contact" 
+            </Link> */}
+            <button
+              onClick={() => setShowContactModal(true)}
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
                 transition-all duration-300">
               Contact Us
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

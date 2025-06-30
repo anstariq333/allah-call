@@ -1,7 +1,35 @@
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function EventsPage() {
+  const [showModal, setShowModal] = useState(false);
+  const [form, setForm] = useState({ name: '', email: '', phone: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [modalEvent, setModalEvent] = useState(null);
+
+  const handleOpenModal = (event) => {
+    setShowModal(true);
+    setModalEvent(event);
+    setForm({ name: '', email: '', phone: '' });
+    setSubmitted(false);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setModalEvent(null);
+  };
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
   const upcomingEvents = [
     {
       title: "Islamic Knowledge Conference",
@@ -16,7 +44,7 @@ export default function EventsPage() {
       date: "April 5, 2024",
       time: "2:00 PM - 6:00 PM",
       location: "Community Hall, Chicago",
-      description: "Annual Quran recitation competition for all age groups with prizes and certificates.",
+      description: "Annual Quran recitation competition for all age groups with exciting prizes, certificates, special guest appearances, and community-wide participation.",
       image: "https://images.unsplash.com/photo-1712249239061-7d4f49ec9d44?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -24,7 +52,7 @@ export default function EventsPage() {
       date: "Every Saturday",
       time: "3:00 PM - 5:00 PM",
       location: "Online",
-      description: "Weekly support group for new Muslims to learn, share experiences, and build community.",
+      description: "Weekly support group for new Muslims to learn about Islam, share personal experiences, ask meaningful questions,  and build a strong, supportive community.",
       image: "https://images.unsplash.com/photo-1712249237537-8c5a0420653b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
@@ -111,7 +139,7 @@ export default function EventsPage() {
                     </p>
                   </div>
                   <p className="text-gray-600 mb-4">{event.description}</p>
-                  <button className="w-full bg-[#f58875] text-white py-2 rounded-lg hover:bg-[#e67a68] transition">
+                  <button className="w-full bg-[#f58875] text-white py-2 rounded-lg hover:bg-[#e67a68] transition" onClick={() => handleOpenModal(event)}>
                     Register Now
                   </button>
                 </div>
@@ -159,7 +187,7 @@ export default function EventsPage() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
+        {/* <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h2>
           <p className="text-gray-600 mb-6">Subscribe to our newsletter to receive updates about upcoming events and activities.</p>
           <form className="flex flex-col sm:flex-row gap-4">
@@ -175,7 +203,59 @@ export default function EventsPage() {
               Subscribe
             </button>
           </form>
-        </div>
+        </div> */}
+
+        {/* Modal Popup */}
+        {showModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+            <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+              <button onClick={handleCloseModal} className="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-2xl">&times;</button>
+              {!submitted ? (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <h2 className="text-2xl font-bold mb-2 text-center text-[#6B2FB3]">Event Registration</h2>
+                  {modalEvent && <p className="text-center text-gray-600 mb-4">{modalEvent.title}</p>}
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="Your Email"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="Your Phone Number"
+                    className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f58875]"
+                    required
+                  />
+                  <button type="submit" className="w-full bg-[#f58875] text-white py-2 rounded-lg hover:bg-[#e67a68] transition">Submit</button>
+                </form>
+              ) : (
+                <div className="flex flex-col items-center justify-center min-h-[200px]">
+                  <svg className="w-16 h-16 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <h3 className="text-xl font-semibold mb-2">Registered Successfully!</h3>
+                  <p className="text-gray-600 mb-4">Thank you for registering. We look forward to seeing you at the event!</p>
+                  <button onClick={handleCloseModal} className="bg-[#f58875] text-white px-6 py-2 rounded-lg hover:bg-[#e67a68] transition">Close</button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

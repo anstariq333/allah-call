@@ -5,7 +5,7 @@ const CaseStudyItem = ({ image, className = "" }) => {
   return (
     <div className={`relative overflow-hidden rounded-lg ${className}`}>
       <img
-        src={image.src || "/placeholder.svg"}
+        src={image.src || "mosque.png"}
         alt={image.alt}
         className={`h-full w-full object-cover ${image.filter || ""}`}
       />

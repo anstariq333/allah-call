@@ -1,8 +1,12 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
+
 
 export default function NewMuslimsPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
   const sections = [
     {
       title: "Accept Islam Now",
@@ -157,15 +161,17 @@ export default function NewMuslimsPage() {
                 font-medium hover:bg-[#e57764] transition-all duration-300">
               Accept Islam Now
             </Link>
-            <Link href="/contact" 
+            <button
+              onClick={() => setShowContactModal(true)}
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
                 transition-all duration-300">
               Contact Us
-            </Link>
+            </button>
           </div>
         </div>
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

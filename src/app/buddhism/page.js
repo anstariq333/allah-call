@@ -30,12 +30,12 @@ export default function BuddhismPage() {
     {
       title: "Historical Connections",
       content: "Muslims and Buddhists have interacted throughout history along the Silk Road and in various Asian regions, sharing knowledge and cultural exchanges.",
-      image: "/images/silk-road.jpg"
+      image: "https://images.unsplash.com/photo-1664532673307-91bf52511020?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Contemporary Dialogue",
       content: "Modern initiatives focus on finding common ground and promoting mutual understanding between Buddhist and Muslim communities.",
-      image: "/images/buddhist-muslim-dialogue.jpg"
+      image: "https://images.unsplash.com/photo-1652535281291-e818d4bcf5b9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

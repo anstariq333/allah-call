@@ -103,8 +103,9 @@ const OurMission = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
             className="bg-[#f58875] hover:text-primary text-white px-6 py-2 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
+            as={undefined}
           >
-            More Info
+            <a href="/our-work" className="block w-full h-full">More Info</a>
           </motion.button>
         </motion.div>
 

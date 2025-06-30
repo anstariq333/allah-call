@@ -1,8 +1,12 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
+ 
 
 export default function MuslimRevivalPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
   const programs = [
     {
       title: "Faith Strengthening",
@@ -13,7 +17,7 @@ export default function MuslimRevivalPage() {
         "Spiritual Retreats",
         "Faith Workshops"
       ],
-      image: "/images/faith.jpg"
+      image: "https://images.unsplash.com/photo-1589366786784-20a72800cebb?q=80&w=1037&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Knowledge Enhancement",
@@ -24,7 +28,7 @@ export default function MuslimRevivalPage() {
         "Scholarly Lectures",
         "Book Clubs"
       ],
-      image: "/images/knowledge.jpg"
+      image: "https://images.unsplash.com/photo-1544685584-9d18c3420eb4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Community Building",
@@ -35,7 +39,7 @@ export default function MuslimRevivalPage() {
         "Youth Activities",
         "Family Events"
       ],
-      image: "/images/community.jpg"
+      image: "https://images.unsplash.com/photo-1719988176478-7f4cc9f60568?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Personal Development",
@@ -46,7 +50,7 @@ export default function MuslimRevivalPage() {
         "Leadership Training",
         "Life Skills Sessions"
       ],
-      image: "/images/development.jpg"
+      image: "https://images.unsplash.com/photo-1553484771-371a605b060b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
@@ -88,12 +92,12 @@ export default function MuslimRevivalPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Strengthen your faith and reconnect with Islamic teachings
             </p>
-            <Link href="#programs" 
+            {/* <Link href="#programs" 
               className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
                 text-lg font-medium hover:bg-[#e57764] transition-all duration-300
                 transform hover:-translate-y-1 hover:shadow-lg">
               Explore Programs
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -181,20 +185,22 @@ export default function MuslimRevivalPage() {
             Join our Muslim Revival programs and take the first step towards strengthening your faith.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" 
+            {/* <Link href="/contact" 
               className="inline-block bg-[#f58875] text-white px-6 py-3 rounded-full 
                 font-medium hover:bg-[#e57764] transition-all duration-300">
               Join Now
-            </Link>
-            <Link href="/contact" 
+            </Link> */}
+            <button
+              onClick={() => setShowContactModal(true)}
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
                 transition-all duration-300">
-              Learn More
-            </Link>
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

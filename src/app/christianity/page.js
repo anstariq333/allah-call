@@ -25,17 +25,17 @@ export default function ChristianityPage() {
     {
       title: "Jesus in Islam",
       content: "Muslims believe that Jesus (Isa) was one of the most important prophets of God, born miraculously to Mary, and honored in both this world and the hereafter.",
-      image: "/images/jesus-islam.jpg"
+      image: "/bible.jpg"
     },
     {
       title: "Mary in Islam",
       content: "Mary (Maryam) is highly respected in Islam. An entire chapter of the Quran is named after her, and she is considered one of the most pious women in history.",
-      image: "/images/mary-islam.jpg"
+      image: "/wedding.jpg"
     },
     {
       title: "Interfaith Dialogue",
       content: "Islam encourages respectful dialogue with Christians to build understanding and cooperation for the common good of society.",
-      image: "/images/interfaith-dialogue.jpg"
+      image: "https://images.unsplash.com/photo-1652535281291-e818d4bcf5b9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

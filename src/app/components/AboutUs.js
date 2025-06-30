@@ -83,14 +83,14 @@ const AboutUs = () => {
             className="flex  items-center gap-3 lg:gap-6 pt-4"
           >
             <button className="bg-[#f58875] hover:text-primary text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
-              Discover More
+            <a href="/our-work" className="block w-full h-full">Discover More</a>
             </button>
             
             <button className="flex items-center gap-3 text-[#6B2FB3] hover:text-[#5B1FA3] font-medium transition-all duration-300 text-lg">
               <span className="bg-[#F5F0FF] p-3.5 rounded-full">
                 <FaPlay className="w-4 h-4" />
               </span>
-              Watch Intro
+              <a href="/our-work" className="block w-full h-full">Watch Intro</a>
             </button>
           </motion.div>
         </motion.div>

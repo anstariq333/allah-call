@@ -25,17 +25,17 @@ export default function JudaismPage() {
     {
       title: "Abrahamic Heritage",
       content: "Both Judaism and Islam trace their spiritual lineage to Prophet Abraham (peace be upon him), who is considered the patriarch of monotheism.",
-      image: "/images/abraham-heritage.jpg"
+      image: "https://images.unsplash.com/photo-1671653250785-8e1c8e8f1148?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Moses in Islam",
       content: "Prophet Moses (Musa) is mentioned more times in the Quran than any other prophet, and his story is central to Islamic teachings.",
-      image: "/images/moses-islam.jpg"
+      image: "https://images.unsplash.com/photo-1620653514733-f510d2b478f4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       title: "Jerusalem",
       content: "Jerusalem holds special significance in both religions as a holy city and has been a center of worship and spiritual life for millennia.",
-      image: "/images/jerusalem.jpg"
+      image: "https://images.unsplash.com/photo-1587297069400-6cc5da81658a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

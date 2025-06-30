@@ -1,8 +1,11 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
 
 export default function CompanionshipPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
   const benefits = [
     {
       title: "Personal Guidance",
@@ -75,12 +78,12 @@ export default function CompanionshipPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Journey together with experienced Muslim mentors
             </p>
-            <Link href="#apply" 
+            {/* <Link href="#apply" 
               className="inline-block bg-[#f58875] text-white px-8 py-3 mt-12 rounded-full 
                 text-lg font-medium hover:bg-[#e57764] transition-all duration-300
                 transform hover:-translate-y-1 hover:shadow-lg">
               Join Program
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -157,29 +160,20 @@ export default function CompanionshipPage() {
               Ready to be paired with a companion? Fill out our application form and we'll match you 
               with a suitable mentor based on your needs and preferences.
             </p>
-            <Link href="/contact" 
-              className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
-                text-lg font-medium hover:bg-[#e57764] transition-all duration-300
-                transform hover:-translate-y-1 hover:shadow-lg">
-              Apply Now
-            </Link>
+            <button
+              onClick={() => setShowContactModal(true)}
+              className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
+                font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
+                transition-all duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Questions?</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Contact us to learn more about the Companionship Program or to discuss your specific needs.
-          </p>
-          <Link href="/contact" 
-            className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
-              font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
-              transition-all duration-300">
-            Contact Us
-          </Link>
-        </div>
+        
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

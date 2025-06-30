@@ -1,8 +1,12 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import PopupForm from '../components/PopupForm';
+import { useState } from 'react';
 
 export default function AcceptIslamNowPage() {
+  const [showContactModal, setShowContactModal] = useState(false);
+
   const steps = [
     {
       title: "Understanding the Shahada",
@@ -41,12 +45,12 @@ export default function AcceptIslamNowPage() {
             <p className="text-xl md:text-2xl text-white mb-8">
               Take your first step towards eternal peace and guidance
             </p>
-            <Link href="#steps" 
+            {/* <Link href="#steps" 
               className="inline-block bg-[#f58875] text-white px-8 py-3 rounded-full 
                 text-lg font-medium hover:bg-[#e57764] transition-all duration-300
                 transform hover:-translate-y-1 hover:shadow-lg">
               Learn How
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
@@ -107,11 +111,12 @@ export default function AcceptIslamNowPage() {
             answer questions, and connect you with your local Muslim community.
           </p>
           <div className="space-x-4">
-            <Link href="/contact" 
+            <button
+              onClick={() => setShowContactModal(true)}
               className="inline-block bg-[#f58875] text-white px-6 py-3 rounded-full 
                 font-medium hover:bg-[#e57764] transition-all duration-300">
               Contact Us
-            </Link>
+            </button>
             <Link href="/new-muslim-guidelines" 
               className="inline-block bg-white text-[#f58875] px-6 py-3 rounded-full 
                 font-medium border-2 border-[#f58875] hover:bg-[#f58875] hover:text-white 
@@ -121,6 +126,7 @@ export default function AcceptIslamNowPage() {
           </div>
         </div>
       </div>
+      <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
   );
 } 

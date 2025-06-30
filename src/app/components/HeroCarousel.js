@@ -75,7 +75,7 @@ const HeroCarousel = () => {
                 </p>
                 <div className="pt-8 sm:pt-0 lg:pt-8">
                   <button className="bg-[#f58875] hover:text-primary text-white px-6 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
-                    Discover More
+                  <a href="/our-work" className="block w-full h-full">Discover More</a>
                   </button>
                 </div>
               </div>
