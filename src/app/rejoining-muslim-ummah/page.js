@@ -61,7 +61,8 @@ export default function RejoiningUmmahPage() {
       ],
       icon: (
         <svg className="w-14 h-14 text-[#f58875]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17v1a3 3 0 003 3h4a3 3 0 003-3v-1M12 12v4m0 0v4m0-4h4m-4 0H8" />
+          <rect x="3" y="4" width="18" height="16" rx="2" strokeWidth="2" />
+          <path strokeWidth="2" d="M7 8h10M7 12h6M7 16h8" />
         </svg>
       )
     }
@@ -129,8 +130,10 @@ export default function RejoiningUmmahPage() {
           <div id="support" className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {supportAreas.map((area, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="relative h-48">
-                  {area.icon}
+                <div className="relative h-48 flex items-center bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 justify-center">
+                  <div className="h-24 w-24 rounded-full bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 flex items-center justify-center mx-auto mb-4">
+                    {area.icon}
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{area.title}</h3>

@@ -6,30 +6,30 @@ import Head from 'next/head';
 export default function TestimoniesPage() {
   const testimonies = [
     {
-      name: "Sarah Johnson",
+      name: "David",
       location: "United States",
-      image: "/images/testimonial-1.jpg",
+      image: "https://images.unsplash.com/photo-1740620779952-17ab8c00de48?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Woman portrait
       quote: "Islam brought peace to my heart and clarity to my mind. The concept of direct connection with Allah resonated deeply with me.",
       story: "I was searching for meaning in life when I first learned about Islam. The logical approach to faith and the emphasis on direct connection with God drew me in."
     },
     {
-      name: "David Martinez",
+      name: "Sarah Johnson",
       location: "Spain",
-      image: "/images/testimonial-2.jpg",
+      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=400&q=80&facepad=2.5", 
       quote: "The brotherhood and sisterhood in Islam is unlike anything I've experienced before. It truly feels like one global family.",
       story: "After studying various religions, I found that Islam's teachings about social justice and community responsibility aligned perfectly with my values."
     },
     {
       name: "Emma Wilson",
       location: "United Kingdom",
-      image: "/images/testimonial-3.jpg",
+      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&q=80&facepad=2.5", // Woman portrait
       quote: "The beautiful thing about Islam is how it guides every aspect of life while maintaining a balance between spiritual and worldly matters.",
       story: "My journey to Islam began through Muslim friends who showed me the beauty of their faith through their actions and character."
     },
     {
       name: "Michael Chen",
       location: "Canada",
-      image: "/images/testimonial-4.jpg",
+      image: "https://images.unsplash.com/photo-1714331251780-db56109a9887?q=80&w=713&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Man portrait
       quote: "Islam answered the deep philosophical questions I had about existence and purpose in a way that satisfied both my heart and mind.",
       story: "As a person with a scientific background, I found Islam's emphasis on seeking knowledge and understanding the natural world particularly appealing."
     }

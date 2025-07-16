@@ -140,8 +140,10 @@ export default function PublishWorkPage() {
           <div id="publications" className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {publicationTypes.map((type, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className="relative h-48">
-                  {type.icon}
+                <div className="relative h-48 flex items-center bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 justify-center">
+                  <div className="h-24 w-24 rounded-full bg-gradient-to-br from-[#f58875]/10 to-[#f58875]/5 flex items-center justify-center mx-auto mb-4">
+                    {type.icon}
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{type.title}</h3>
