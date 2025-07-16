@@ -51,7 +51,7 @@ export default function BoardOfDirectorsPage() {
       name: "Ustadh Yusuf Rahman",
       position: "Director of Education",
       bio: "Dedicated specialist in Islamic education and curriculum development with over 15 years of teaching experience. Ustadh Yusuf has pioneered innovative digital Islamic learning solutions, empowering students of all ages to access authentic knowledge.",
-      image: "/images/directors/ustadh-yusuf.jpg",
+      image: "https://images.unsplash.com/photo-1623031251275-b5603cfada6b?q=80&w=1205&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       achievements: [
         "Developed award-winning online courses",
         "Trained over 500 Islamic educators",
