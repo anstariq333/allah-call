@@ -71,12 +71,7 @@ export default function ArticlesBooksPage() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Articles & Books | AllahCall</title>
-        <meta name="description" content="Explore our collection of Islamic articles and books to deepen your understanding of Islam and its teachings." />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -195,8 +190,6 @@ export default function ArticlesBooksPage() {
         </div>
       </div>
       <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
-    
     </div>
-    </>
   );
 } 
