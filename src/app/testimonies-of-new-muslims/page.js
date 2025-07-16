@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function TestimoniesPage() {
   const testimonies = [
@@ -35,7 +36,12 @@ export default function TestimoniesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Testimonies of New Muslims | AllahCall</title>
+        <meta name="description" content="Read inspiring stories and testimonies from new Muslims who found their path to Islam." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -150,5 +156,6 @@ export default function TestimoniesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 } 

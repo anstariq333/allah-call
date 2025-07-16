@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import PopupForm from '../components/PopupForm';
 import { useState } from 'react';
+import Head from 'next/head';
 
 
 export default function NewMuslimsPage() {
@@ -70,7 +71,12 @@ export default function NewMuslimsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>New Muslims | AllahCall</title>
+        <meta name="description" content="Welcome to Islam! Find resources, support, and guidance for new Muslims on AllahCall." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -173,5 +179,6 @@ export default function NewMuslimsPage() {
       </div>
       <PopupForm open={showContactModal} onClose={() => setShowContactModal(false)} title="Contact Us" purpose="contact" />
     </div>
+    </>
   );
 } 

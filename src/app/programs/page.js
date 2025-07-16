@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function ProgramsPage() {
   const programs = [
@@ -46,7 +47,12 @@ export default function ProgramsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Islamic Programs | AllahCall</title>
+        <meta name="description" content="Join our Islamic learning programs and benefit from expert guidance, flexible learning, and a supportive community." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -156,5 +162,6 @@ export default function ProgramsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 } 

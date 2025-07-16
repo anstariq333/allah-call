@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function QuranSunnahPage() {
   const quranSections = [
@@ -44,7 +45,12 @@ export default function QuranSunnahPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Quran & Sunnah | AllahCall</title>
+        <meta name="description" content="Discover the importance of the Quran and Sunnah as the primary sources of Islamic guidance." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -132,5 +138,6 @@ export default function QuranSunnahPage() {
         </div>
       </div>
     </div>
+    </>
   );
 } 

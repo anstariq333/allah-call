@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import AllahCallGrid from '../components/AllahCallGrid';
+import Head from 'next/head';
 
 export default function GalleryPage() {
   const galleryCategories = [
@@ -42,7 +43,12 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>Gallery | AllahCall</title>
+        <meta name="description" content="Browse our gallery of Islamic events, architecture, art, and community activities on AllahCall." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
     
 
       {/* Hero Section */}
@@ -116,5 +122,6 @@ export default function GalleryPage() {
         </div> */}
       </div>
     </div>
+    </>
   );
 } 

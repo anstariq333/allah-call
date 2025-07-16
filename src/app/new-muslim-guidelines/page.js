@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function NewMuslimGuidelinesPage() {
   const guidelines = [
@@ -57,7 +58,12 @@ export default function NewMuslimGuidelinesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <Head>
+        <title>New Muslim Guidelines | AllahCall</title>
+        <meta name="description" content="Practical guidelines and advice for new Muslims to embrace Islam in daily life." />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-[500px] w-full">
         <Image
@@ -166,5 +172,6 @@ export default function NewMuslimGuidelinesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 } 

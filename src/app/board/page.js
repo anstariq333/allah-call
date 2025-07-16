@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Float, Stars } from '@react-three/drei';
+import Head from 'next/head';
 
 // Three.js Solar System Component
 const SolarSystem = () => {
@@ -122,7 +123,12 @@ export default function BoardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <>
+      <Head>
+        <title>Board | AllahCall</title>
+        <meta name="description" content="Discover the Board members of AllahCall and their contributions to our mission of spreading Islamic knowledge." />
+      </Head>
+      <div className="min-h-screen bg-gray-50 relative overflow-hidden">
       {/* Three.js Background */}
       <div className="fixed inset-0 -z-10">
         <Canvas camera={{ position: [0, 0, 10] }}>
@@ -273,5 +279,6 @@ export default function BoardPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 } 
