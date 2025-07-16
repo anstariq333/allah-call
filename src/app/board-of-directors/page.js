@@ -15,42 +15,42 @@ if (typeof window !== 'undefined') {
 export default function BoardOfDirectorsPage() {
   const directors = [
     {
-      name: "Dr. Ahmed Hassan",
-      position: "Chairman",
-      bio: "Renowned Islamic scholar with over 20 years of experience in dawah work and community leadership. Author of 12 books on Islamic theology and contemporary issues.",
-      image: "/images/directors/dr-ahmed.jpg",
+      name: "Hafiz Muhammad Haris",
+      position: "Founder & CEO",
+      bio: "Visionary founder of AllahCall, dedicated to spreading authentic Islamic knowledge globally. With a passion for community leadership and youth mentorship, he has inspired countless individuals to embrace Islamic values.",
+      image: "/hafiz.jpeg",
       achievements: [
-        "Established 15 Islamic centers worldwide",
-        "Advisor to multiple Islamic organizations",
-        "PhD in Islamic Studies from Al-Azhar University"
+        "Founded AllahCall and led its global expansion",
+        "Delivered keynote speeches at international Islamic conferences",
+        "Mentored over 100 young Islamic scholars"
       ]
     },
     {
-      name: "Sheikh Muhammad Ali",
-      position: "Vice Chairman",
-      bio: "Expert in Islamic jurisprudence and founder of several Islamic educational institutions. Specializes in bridging traditional scholarship with modern challenges.",
-      image: "/images/directors/sheikh-muhammad.jpg",
+      name: "Ya'qub Nuri Amin",
+      position: "Islamic Scholar",
+      bio: "Respected Islamic scholar known for his deep understanding of Islamic jurisprudence and commitment to interfaith dialogue. He has played a pivotal role in educational initiatives and community outreach programs.",
+      image: "/almubeen.jpeg",
       achievements: [
-        "Developed innovative Islamic curricula",
-        "Regular speaker at international conferences",
-        "30 years of teaching experience"
+        "Authored several articles on Islamic jurisprudence",
+        "Conducted interfaith dialogue sessions worldwide",
+        "Recognized for excellence in Islamic education"
       ]
     },
     {
-      name: "Dr. Fatima Khan",
-      position: "Executive Director",
-      bio: "PhD in Islamic Studies and experienced in interfaith dialogue and community outreach. Pioneered women's Islamic education programs in 7 countries.",
-      image: "/images/directors/dr-fatima.jpg",
+      name: "Muhammad Zeeshan",
+      position: "Marketing Manager",
+      bio: "Dynamic marketing professional with a talent for digital strategy and community engagement. Zeeshan has successfully elevated AllahCall's presence and impact through innovative campaigns.",
+      image: "/zeeshan.png",
       achievements: [
-        "Recipient of the Global Peace Award",
-        "Published 8 research papers",
-        "Advisor to UN interfaith initiatives"
+        "Launched successful digital campaigns for AllahCall",
+        "Increased community engagement by 300% in one year",
+        "Awarded 'Best Islamic Marketing Initiative' 2023"
       ]
     },
     {
       name: "Ustadh Yusuf Rahman",
       position: "Director of Education",
-      bio: "Specialist in Islamic education and curriculum development with 15 years of teaching experience. Focused on digital Islamic learning solutions.",
+      bio: "Dedicated specialist in Islamic education and curriculum development with over 15 years of teaching experience. Ustadh Yusuf has pioneered innovative digital Islamic learning solutions, empowering students of all ages to access authentic knowledge.",
       image: "/images/directors/ustadh-yusuf.jpg",
       achievements: [
         "Developed award-winning online courses",

@@ -33,7 +33,7 @@ const Team = () => {
       id: 3,
       name: " Muhammad Zeeshan",
       role: "Marketing Manager",
-      image: "/Zeeshan.jpeg",
+      image: "/zeeshan.png",
       social: {
         facebook: "#",
         twitter: "#",
